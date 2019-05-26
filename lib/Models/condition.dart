@@ -1,0 +1,25 @@
+
+
+class Condition {
+  String text;
+  String icon;
+  int code;
+
+  Condition({
+    this.text,
+    this.icon,
+    this.code,
+  });
+
+  factory Condition.fromJson(Map<String, dynamic> json) => new Condition(
+    text: json["text"],
+    icon: json["icon"],
+    code: json["code"],
+  );
+
+  Map<String, dynamic> toJson() => {
+    "text": text,
+    "icon": icon,
+    "code": code,
+  };
+}
